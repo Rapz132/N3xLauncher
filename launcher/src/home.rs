@@ -28,14 +28,14 @@ impl Launcher {
             if tag.is_empty() {
                 "Minecraft"
             } else {
-                "Horizon"
+                "N3xLauncher"
             },
             |i| i.name.as_str(),
         );
         let mut what = vec![format!("Minecraft: Java Edition {game}")];
         if !tag.is_empty() {
             what.push(format!(
-                "Horizon {}",
+                "N3xLauncher {}",
                 horizon_launcher::nightly::label(tag)
                     .unwrap_or_else(|| tag.trim_start_matches('v').to_string())
             ));
